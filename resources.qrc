@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/plugins/AGCloacas" >
+        <file>icon.png</file>
+        <file>editar_attr.png</file>
+        <file>cl_tramos.png</file>
+        <file>polilinea.png</file>
+        <file>polilinea_delete.png</file>
+        <file>conexion.png</file>
+        <file>direction.png</file>
+        <file>dir_delete.png</file>
+         <file>dir_change.png</file>
+    </qresource>
+</RCC>
