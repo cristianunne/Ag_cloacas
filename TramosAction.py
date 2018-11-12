@@ -261,6 +261,7 @@ class TramosAction():
             ztn_inicio = feat['ztn']
             tipo_z = feat['ty_z']
 
+
             self.dlg_tramos.n_nodo_inicial.setText(str(n_nod))
             self.dlg_tramos.n_nodo_inicial.setEnabled(False)
 
@@ -276,6 +277,10 @@ class TramosAction():
             #debo seleccionar el tipo de simbolo asignado
             if res == 1:
                 # elijo  el simbolo segun el simbolo que viene ya cargado
+                # Guardo las Variables del nodo inicial
+                self.n_nodo_inicial = self.dlg_tramos.n_nodo_inicial.text()
+                self.tipo_z_inicial = self.dlg_tramos.tipo_z_inicial.currentText()
+                self.ztn_inicial = self.dlg_tramos.ztn_inicial.text()
 
                 if res_exists_symbol_inicio != False:
                     self.evalButtonSymbolInicio(res_exists_symbol_inicio['ty_sym'])
