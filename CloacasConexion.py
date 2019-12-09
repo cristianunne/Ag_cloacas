@@ -245,19 +245,15 @@ class CloacasConexion():
             #print feat.geometry().asPoint().y()
             res = geom_cl_tramos.closestSegmentWithContext(QgsPoint(feat.geometry().asPoint()))[1]
             #agrego el closest segment
-           
-            
-            
+
             #Evaluo si esta a la derecha o arriba y abajo
             x_cen = feat.geometry().asPoint().x()
             y_cen = feat.geometry().asPoint().y()
             x_colseg = res.x()
             y_colseg = res.y()
-            
             #POINT AUX ES EL QUE LE DEBO ASIGNAR A CL_INFOTD
            
-            
-            
+
             poly = QgsGeometry.fromPolyline([feat.geometry().asPoint(), res])
 
             feat_.setGeometry(poly)

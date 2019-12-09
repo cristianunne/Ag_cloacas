@@ -89,9 +89,11 @@ class AGCloacas:
         #self.toolbar.addSeparator()
         self.conexion_tool = CloacasConexion(self.iface, self.toolbar)
         self.toolbar.addSeparator()
+
         self.tramos_action = TramosAction(self.iface, self.toolbar)
         self.delete_tramos_properties = DeleteTramosProperties(self.iface, self.toolbar)
         self.toolbar.addSeparator()
+        
         self.direction_action = DirectionAction(self.iface, self.toolbar)
         self.direction_delete_action = DirectionDeleteAction(self.iface, self.toolbar)
         self.direcion_change = DirectionChange(self.iface, self.toolbar)

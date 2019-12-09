@@ -181,6 +181,8 @@ class TramosAction():
                             self.resetDialogs()
                             self.showBoxWithInitialAndFinalData(tramo_select)
                             self.tramos.setChecked(False)
+
+
                     else:
                         self.iface.messageBar().pushMessage("Error", "Ya existen Propiedades Agregadas. Borrelos e intente nuevamente!", level=QgsMessageBar.CRITICAL)
 
@@ -659,6 +661,7 @@ class TramosAction():
         res_exists_symbol_inicio = self.cl_nodo_symbol_entity.getExistSymbolInicio(tramo_select)
         res_exists_symbol_final = self.cl_nodo_symbol_entity.getExistSymbolFinal(tramo_select)
         res_inicio = False
+        res_final = False
 
         # Evaluo el tipo de simbolo al inicio
         if self.tipo_simbol_inicio == "BRV":
@@ -713,6 +716,8 @@ class TramosAction():
             if res_final:
                 if self.cl_direction.addDirection(tramo_select):
                     self.iface.messageBar().pushMessage("Resultado: ", "Proceso Exitoso!", level=QgsMessageBar.INFO)
+
+
         elif self.tipo_simbol_inicio == "BRS" or self.tipo_simbol_inicio == "CAL" or self.tipo_simbol_inicio == "ESE" or self.tipo_simbol_inicio == "BRH":
 
             if res_exists_symbol_inicio != False:
